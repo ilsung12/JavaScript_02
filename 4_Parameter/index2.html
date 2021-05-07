@@ -10,7 +10,7 @@
 <body>
     <div class="alert-box" id="alertId">
         <p id="alertText">Alert box</p>
-        <button id="close">X</button>
+        <button onclick="closeAlert()">X</button>
     </div>
 
     <button onclick="checkIdPw('아이디를 입력안하셨어요')">버튼1</button>
@@ -24,11 +24,9 @@
             document.getElementById('alertText').innerHTML = idORpw;   
         }
 
-        
-            document.getElementById('close').addEventListener('click', function() {
-                document.getElementById('alertId').style.display = 'none';
-            });
-        
+        function closeAlert() {
+            document.getElementById('alertId').style.display = 'none';
+        }
 
     </script>
 
