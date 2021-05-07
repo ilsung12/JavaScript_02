@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙제</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="alert-box" id="alertId">
+        <p id="alertText">Alert box</p>
+        <button id="close">X</button>
+    </div>
+
+    <button onclick="checkIdPw('아이디를 입력안하셨어요')">버튼1</button>
+    <button onclick="checkIdPw('비밀번호를 입력안하셨어요')">버튼2</button>
+    
+
+    <script>
+        function checkIdPw(idORpw) {       
+            document.getElementById('alertId').style.display = 'block';
+            // document.getElementsByClassName('alert-box')[0]
+            document.getElementById('alertText').innerHTML = idORpw;   
+        }
+
+        
+            document.getElementById('close').addEventListener('click', function() {
+                document.getElementById('alertId').style.display = 'none';
+            });
+        
+
+    </script>
+
+
+    
+</body>
+</html>
