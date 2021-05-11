@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- * 사실 JS는 body 끝 부분에 적는다. -->
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./main.css">
+
+    <title>hello, world</title>
+</head>
+<body>
+    
+    <h3 id="hi">안녕</h3>
+
+    <script>
+        $('#hi').click(function() {
+            $('#hi').animate({ marginLeft: '100px', marginTop: '100px' }, 3000);
+        });
+
+    </script>
+
+
+</body>
+</html>
