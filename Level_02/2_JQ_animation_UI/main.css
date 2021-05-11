@@ -50,12 +50,12 @@
 }
 
 .left-menu {
-    width: 14%;
+    width: 150px;
     height: 100%;
     background: rgb(131, 184, 52);
     color: white;
     position: fixed;
-    margin-left: -14%;
+    margin-left: -150px;
 }
 
 .form-control {
