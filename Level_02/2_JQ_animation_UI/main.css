@@ -47,7 +47,9 @@
 
 .nav-sub {
     display: none;
+    cursor: pointer;
 }
+
 
 .left-menu {
     width: 150px;
@@ -68,4 +70,8 @@
 
 #pw-alert {
     display: none;
+}
+
+#nav-sub-btn {
+    cursor: pointer;
 }
