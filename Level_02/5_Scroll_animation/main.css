@@ -118,6 +118,7 @@
 
 .slide-next:hover {
   opacity: 80%;
+  transition: all 0.6s;
 }
 
 .slide-before {
@@ -135,6 +136,7 @@
 
 .slide-before:hover {
   opacity: 80%;
+  transition: all 0.6s;
 }
 
 .slide-box {
