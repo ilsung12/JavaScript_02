@@ -112,6 +112,27 @@
       >
     </div>
 
+    <h4 id="product-title">상품제목</h4>
+    <p id="product-content">상품내용</p>
+    <div style="margin-bottom: 500px"></div>
+
+    <script>
+      // array & object : 여러가지 자료를 한 곳에 저장하고 싶을 때.
+
+      var arCar = ['BMW', '520', 2000];
+
+      var obCar = { brand: 'BMW', model: '520', cc: 2000 };
+
+      var carData = [{ brand: 'BMW' }, { model: 520 }];
+
+      // $('#product-title').html(arCar[0]);
+      // document.getElementById('product-title').innerHTML = arCarData[0];
+      // $('#product-content').html(obCar.model);
+
+      $('#product-title').html(carData[0].brand);
+      $('#product-content').html(carData[1].model);
+    </script>
+
     <!-- Carousel [케러셀] (이미지 슬라이드 UI) -->
     <h4 class="my-4 text-center">Season</h4>
 
