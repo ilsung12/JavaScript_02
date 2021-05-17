@@ -105,24 +105,38 @@
 .slide-next {
   position: absolute;
   /* 요소를 겹치거나 띄우려면 absolute(쓰려면 상위 요소에 position: relative를 작성해야함) */
-  top: 35%;
+  top: 15%;
+  height: 200px;
   right: 0;
-  background: transparent;
+  background: rgb(70, 68, 68);
   font-size: 40px;
   color: white;
   border: none;
   outline: none;
+  opacity: 0%;
+}
+
+.slide-next:hover {
+  opacity: 80%;
+  transition: all 0.6s;
 }
 
 .slide-before {
   position: absolute;
-  top: 35%;
+  top: 15%;
+  height: 200px;
   left: 0;
-  background: transparent;
+  background: rgb(70, 68, 68);
   font-size: 40px;
   color: white;
   border: none;
   outline: none;
+  opacity: 0%;
+}
+
+.slide-before:hover {
+  opacity: 80%;
+  transition: all 0.6s;
 }
 
 .slide-box {
