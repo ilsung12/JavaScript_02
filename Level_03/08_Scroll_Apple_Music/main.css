@@ -1,5 +1,5 @@
 .card-background {
-  height: 3000px;
+  height: 2500px;
 }
 
 .card-box img {
@@ -10,6 +10,6 @@
 
 .card-box {
   position: sticky;
-  top: 300px;
-  margin-top: 200px;
+  top: 100px;
+  margin-top: 42px;
 }

@@ -47,11 +47,11 @@
       $(window).scroll(function () {
         var scrollHeight = $(window).scrollTop();
         console.log(scrollHeight);
+        var y = (-1 / 300) * scrollHeight + 100 / 63;
+        var z = (-1 / 900) * scrollHeight + 100 / 66;
+        $('.card-box').eq(0).css('opacity', y);
+        $('.card-box').eq(1).css('opacity', z);
       });
-
-      400 - 700;
-
-      1200 - 1500;
     </script>
   </body>
 </html>
