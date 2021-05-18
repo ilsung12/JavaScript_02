@@ -46,7 +46,7 @@
     <div class="container my-4">
       <button class="btn btn-danger" id="sortPrice">가격순정렬</button>
       <button class="btn btn-primary" id="abc">가나다정렬</button>
-      <button class="btn btn-primary" id="filterPrice">6만원이하필터</button>
+      <button class="btn btn-primary" id="filterPrice">6만원이하</button>
     </div>
 
     <script>
@@ -65,23 +65,20 @@
     ></script>
 
     <script>
-      for (var i = 0; i < products.length; i++) {
-        $('.title').eq(i).html(products[i].title);
-        $('.price')
-          .eq(i)
-          .html('가격 : ' + products[i].price);
-      }
-
-      $('#sortPrice').click(function () {
-        products.sort(function (a, b) {
-          return a.price - b.price;
-        });
+      function productsCard() {
         for (var i = 0; i < products.length; i++) {
           $('.title').eq(i).html(products[i].title);
           $('.price')
             .eq(i)
             .html('가격 : ' + products[i].price);
         }
+      }
+
+      $('#sortPrice').click(function () {
+        products.sort(function (a, b) {
+          return a.price - b.price;
+        });
+        productsCard();
       });
 
       $('#abc').click(function () {
@@ -92,21 +89,32 @@
             return 1;
           }
         });
-        for (var i = 0; i < products.length; i++) {
-          $('.title').eq(i).html(products[i].title);
-          $('.price')
-            .eq(i)
-            .html('가격 : ' + products[i].price);
-        }
+        productsCard();
       });
 
       $('#filterPrice').click(function () {
+        //$('.card-group').hide();
         var newProducts = products.filter(function (a) {
           return a.price <= 60000;
         });
         console.log(newProducts);
+        // 기존 카드 제거(innerHTML)
+        $('.card-group').html('');
+        newProducts.forEach(function (a) {
+          for (let i = 0; i <= newProducts.length; i++) {
+            var template = `
+          <div class="card">
+        <img src="https://via.placeholder.com/600" />
+        <div class="card-body">
+          <h5 class="title">${newProducts[i].title}</h5>
+          <p class="price">가격 : ${newProducts[i].price}</p>
+          <button class="btn btn-danger">주문하기</button>
+        </div>
+      </div>`;
 
-        var template = `<div>상품</div>`;
+            $('.card-group').append(template);
+          }
+        });
       });
     </script>
 
