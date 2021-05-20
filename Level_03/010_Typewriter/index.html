@@ -29,25 +29,20 @@
       var textMove = document.querySelector('h1').innerHTML;
 
       $('button').click(function () {
+        textAnimate(textH1, textMove);
+      });
+
+      function textAnimate(a, b) {
         //   h1을 빈칸으로 만들고
         $('h1').html('');
         //   0.5초후에 text 1를 h1안에 입력
-        setTimeout(function () {
-          textH1.innerHTML = textH1.innerHTML + textMove[0];
-        }, 500);
-        setTimeout(function () {
-          textH1.innerHTML = textH1.innerHTML + textMove[1];
-        }, 1000);
-        setTimeout(function () {
-          textH1.innerHTML = textH1.innerHTML + textMove[2];
-        }, 1500);
-        setTimeout(function () {
-          textH1.innerHTML = textH1.innerHTML + textMove[3];
-        }, 2000);
-        setTimeout(function () {
-          textH1.innerHTML = textH1.innerHTML + textMove[4];
-        }, 2500);
-      });
+        for (let i = 0; i < b.length; i++) {
+          setTimeout(function () {
+            a.innerHTML = a.innerHTML + b[i];
+          }, 500 * i);
+          console.log(i);
+        }
+      }
     </script>
   </body>
 </html>
