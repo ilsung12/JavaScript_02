@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <div>
+      <button>버튼</button>
+      <h1>Hello, World ! !</h1>
+    </div>
+
+    <script>
+      //   버튼을 누르면
+      //   h1을 빈칸으로 만들고
+      //   0.5초후에 text 1를 h1안에 입력
+      //   0.5초후에 text 2를 h1안에 입력 (h1 안에 2를 더함)
+      //   0.5초후에 text 3를 h1안에 입력 (h1 안에 3를 더함)
+      //   0.5초후에 text 4를 h1안에 입력 (h1 안에 4를 더함)
+
+      var textH1 = document.querySelector('h1');
+      var textMove = document.querySelector('h1').innerHTML;
+
+      $('button').click(function () {
+        //   h1을 빈칸으로 만들고
+        $('h1').html('');
+        //   0.5초후에 text 1를 h1안에 입력
+        setTimeout(function () {
+          textH1.innerHTML = textH1.innerHTML + textMove[0];
+        }, 500);
+        setTimeout(function () {
+          textH1.innerHTML = textH1.innerHTML + textMove[1];
+        }, 1000);
+        setTimeout(function () {
+          textH1.innerHTML = textH1.innerHTML + textMove[2];
+        }, 1500);
+        setTimeout(function () {
+          textH1.innerHTML = textH1.innerHTML + textMove[3];
+        }, 2000);
+        setTimeout(function () {
+          textH1.innerHTML = textH1.innerHTML + textMove[4];
+        }, 2500);
+      });
+    </script>
+  </body>
+</html>
